@@ -1,0 +1,471 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .MainBar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            border-top: 4px solid red;
+            border-right: 4px solid red;
+            height: 80px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .Logistic {
+            background-color: red;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .MainBar a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: black;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .MainBar a:hover {
+            color: red;
+        }
+
+        .Topic {
+            background: url("pic/Ship2.jpg") no-repeat center/cover;
+            width: 100%;
+            height: 320px;
+            position: relative;
+        }
+
+        .Topic2 {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .Topic2 p {
+            color: white;
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        .About {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            width: 90%;
+            margin: 100px auto;
+            align-items: center;
+        }
+
+        .About img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .tex h3 {
+            color: rgb(0, 92, 167);
+            margin-bottom: 10px;
+        }
+
+        .tex h1 {
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+
+        .tex h4 {
+            font-weight: normal;
+            margin: 15px 0;
+        }
+
+        .world {
+            color: red;
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        .exp {
+            display: inline-block;
+            background-color: red;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .exp:hover {
+            background-color: darkred;
+        }
+
+        .facts {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 60px 80px;
+            gap: 40px;
+        }
+
+        .facts-text {
+            flex: 1;
+        }
+
+        .facts-text h4 {
+            color: teal;
+            margin-bottom: 10px;
+        }
+
+        .facts-text h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .facts-text p {
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .call-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .call-box .icon {
+            background: red;
+            color: white;
+            font-size: 2rem;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .call-box .phone {
+            color: red;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .facts-cards {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            color: white;
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        .card .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .card.red {
+            background: #e63946;
+        }
+
+        .card.blue {
+            background: #00b4d8;
+        }
+
+        .card.green {
+            background: #2a9d8f;
+        }
+
+        .card h2 {
+            font-size: 2rem;
+            margin: 5px 0;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        .feature {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            width: 90%;
+            margin: 100px auto;
+            align-items: center;
+        }
+
+        .feature img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .tex h3 {
+            color: rgb(0, 92, 167);
+            margin-bottom: 10px;
+        }
+
+        .tex h1 {
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+
+        .tex h4 {
+            font-weight: normal;
+            margin: 15px 0;
+        }
+
+        .world {
+            color: red;
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        .team-container {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .team-container .sub-title {
+            text-align: center;
+            color: #00bcd4;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .team-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .member-card {
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .member-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            opacity: 0.5;
+            transition: ease 0.5s;
+        }
+
+        .member-card img:hover {
+            transform: scale(1.2, 1.2);
+            opacity: 1.0;
+        }
+
+        .member-card h3 {
+            margin: 12px 0 5px;
+            font-size: 18px;
+            color: #222;
+        }
+
+        .member-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        footer {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('pic/Dotted2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        footer p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Main">
+        <div class="MainBar">
+            <div class="Logistic">Logistic</div>
+            <a href="index.html">HOME</a>
+            <a href="ABOUT.html">ABOUT</a>
+            <a href="SERVICES.html">SERVICES</a>
+            <a href="CONTACT.html">CONTACT</a>
+        </div>
+
+        <div class="Topic">
+            <div class="Topic2">
+                <p>About Us</p>
+            </div>
+        </div>
+
+        <div class="About">
+            <div class="img">
+                <img src="pic/Box.jpg" alt="Boxes">
+            </div>
+            <div class="tex">
+                <h3>About Us</h3>
+                <h1>Quick Transport and Logistics Solutions</h1>
+                <h4>We provide fast, secure, and reliable transport and logistics services worldwide.
+                    With our professional team and global partners, your goods are always delivered safely and on time.
+                </h4>
+                <div class="world">🌎 🚚</div>
+                <h1>Global Coverage — On Time Delivery</h1>
+                <h4>
+                    No matter where your business operates, we've got you covered.<br>
+                    Our global network ensures smooth delivery and hassle-free logistics across continents.<br><br>
+                    Punctuality is our priority. We guarantee that your shipments reach their destination exactly when
+                    you
+                    need them.
+                </h4>
+                <a class="exp" href="SERVICES.html">Explore More</a>
+            </div>
+        </div>
+        <div class="facts">
+            <div class="facts-text">
+                <h4>SOME FACTS</h4>
+                <h1>#1 Place To Manage All Of Your Shipments</h1>
+                <p>
+                    All your deliveries, one powerful platform - stay organized and never miss a shipment
+                </p>
+
+                <div class="call-box">
+                    <div class="icon">📞</div>
+                    <div>
+                        <h4>Call for any query!</h4>
+                        <p class="phone">+967 730 771 661</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="facts-cards">
+                <div class="card red">
+                    <div class="icon">👥</div>
+                    <h2>3596</h2>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="card blue">
+                    <div class="icon">🚚</div>
+                    <h2>10650</h2>
+                    <p>Complete Shipments</p>
+                </div>
+                <div class="card green">
+                    <div class="icon">⭐</div>
+                    <h2>5540</h2>
+                    <p>Customer Reviews</p>
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="img">
+                <img src="pic/feature.jpg" alt="Boxes">
+            </div>
+            <div class="tex">
+                <h3>Our Features</h3>
+                <h1>We Are Trusted Logistics Company Since 1990</h1>
+                <h4>With over 30 years of experience, we ensure your shipments are handled with care, efficiency,
+                    and reliability.
+                </h4>
+                <div class="world"></div>
+                <h1>Worlwide Services — On Time Delivery</h1>
+                <h4>
+                    No matter where your business operates, we've got you covered.<br>
+                    Our global network ensures smooth delivery and hassle-free logistics across continents.<br><br>
+                    Punctuality is our priority. We guarantee that your shipments reach their destination exactly
+                    when
+                    you
+                    need them.
+                </h4>
+            </div>
+        </div>
+        <div class="team-container">
+            <p class="sub-title">OUR TEAM</p>
+            <h2>Expert Team Members</h2>
+
+            <div class="team-members">
+                <div class="member-card">
+                    <img src="pic/team-1.jpg" alt="Member">
+                    <h3>Eng. Ahmed Al-Ali</h3>
+                    <p>Civil Engineer</p>
+                </div>
+
+                <div class="member-card">
+                    <img src="pic/team-2.jpg" alt="Member">
+                    <h3>Eng. Sami Youssef</h3>
+                    <p>Structural Engineer</p>
+                </div>
+
+                <div class="member-card">
+                    <img src="pic/team-3.jpg" alt="Member">
+                    <h3>Eng. Khalled Mansour</h3>
+                    <p>Projects Supervisor</p>
+                </div>
+
+                <div class="member-card">
+                    <img src="pic/team-4.jpg" alt="Member">
+                    <h3>Eng. Mohammed Hussein</h3>
+                    <p>Site Engineer</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h2>shipment.com</h2>
+            <p>©Al-Abbadi.com, All Right Reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
